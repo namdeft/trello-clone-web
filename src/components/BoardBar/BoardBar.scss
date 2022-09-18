@@ -1,0 +1,110 @@
+@use 'scss/' as *;
+
+.board-bar {
+    color: $navbar-text-color;
+    padding: 6px $gap;
+
+    display: flex;
+    justify-content: space-between;
+
+    .board-bar__info {
+        display: flex;
+
+        .item {
+            padding: 4px 10px;
+            margin-right: 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: $border-radius;
+
+            transition: all 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .board-name {
+            padding: 4px 10px;
+            margin-right: 4px;
+            width: 150px;
+            border-radius: $border-radius;
+
+            transition: all 0.2s ease;
+            cursor: pointer;
+
+            input {
+                width: 100%;
+                outline: none;
+                border: none;
+                background-color: transparent;
+                color: $navbar-text-color;
+
+                cursor: pointer;
+
+                &:focus {
+                    font-weight: 500;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .divider {
+            &::before {
+                content: '|';
+                display: block;
+
+                padding: 3px 8px;
+                width: 23px;
+
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .friends-avatar {
+            img {
+                width: 33px;
+                height: 33px;
+                object-fit: contain;
+
+                margin-right: 4px;
+                border-radius: 50%;
+
+                transition: all 0.2s ease;
+                cursor: pointer;
+
+                &:hover {
+                    scale: 1.1;
+                    filter: brightness(120%);
+                }
+            }
+        }
+
+        .more-friends {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+
+            margin-right: 20px;
+            padding: 4px 8px;
+        }
+    }
+
+    .board-bar__actions {
+        .item {
+            padding: 4px 10px;
+            margin-right: 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: $border-radius;
+
+            transition: all 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+}

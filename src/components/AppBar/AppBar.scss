@@ -1,0 +1,93 @@
+@use 'scss/' as *;
+
+.app-bar {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 6px $gap;
+
+    color: $navbar-text-color;
+    background-color: rgba(0, 0, 0, 0.16);
+
+    .app-bar__information {
+        display: flex;
+
+        .app-bar__search {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: $border-radius;
+            transition: all 0.2s ease;
+
+            input {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                height: 100%;
+                color: $navbar-text-color;
+                padding: 0 8px 0 8px;
+
+                &::placeholder {
+                    font-size: 15px;
+
+                    color: $navbar-text-color;
+                    opacity: 0.6;
+                }
+            }
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+        }
+    }
+    .app-bar__logo {
+        color: $navbar-text-color;
+        padding: 1px $gap;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: $border-radius;
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    .app-bar__user {
+        display: flex;
+    }
+}
+
+.app-bar__item {
+    padding: 4px 10px;
+    margin-right: 4px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: $border-radius;
+    transition: all 0.2s ease;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.user-img {
+    img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    transition: all 0.2s ease;
+
+    &:hover {
+        scale: 1.1;
+        filter: brightness(120%);
+    }
+}

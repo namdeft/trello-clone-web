@@ -1,0 +1,206 @@
+@use 'scss' as *;
+
+.column {
+    background-color: $board-column-color-bg;
+
+    width: $board-column-width;
+    min-width: $board-column-width;
+    padding-left: $gap;
+    border-radius: $border-radius;
+    margin-left: $gap;
+
+    .column-content {
+        .column-drag-handle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .column-title {
+                padding: 5px 0;
+                font-weight: 500;
+                width: 100%;
+
+                .editable-title {
+                    padding: 5px 8px;
+                    width: 100%;
+
+                    background-color: $board-column-color-bg;
+                    border: none;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:focus {
+                        background-color: $navbar-text-color;
+                        border: 1px solid red;
+                        cursor: auto;
+                    }
+                }
+            }
+
+            .column-dropdown-actions {
+                padding-right: 4px;
+
+                .dropdown-btn {
+                    &:after {
+                        content: '...';
+                        border: none;
+                    }
+                    &:hover {
+                        background-color: rgba(150, 150, 200, 0.3);
+
+                        transition: all 0.3s ease;
+                    }
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                    font-size: 20px;
+                    padding: 0 $gap;
+                    background-color: $board-column-color-bg;
+                    color: $board-text-color;
+                    border: none;
+
+                    transition: all 0.3s ease;
+                }
+                .dropdown-menu {
+                    padding: 0;
+                }
+            }
+        }
+        .card-list {
+            overflow-y: auto;
+            max-height: 547px;
+            padding-right: 4px;
+
+            &::-webkit-scrollbar {
+                -webkit-appearance: none;
+            }
+
+            &::-webkit-scrollbar:vertical {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: darken($board-column-color-bg, 15);
+                border-right: 3px solid $board-column-color-bg;
+                border-radius: 4px;
+            }
+
+            .card-ghost {
+                transition: transform 0.18s ease;
+                transform: rotateZ(5deg);
+                font-weight: bold;
+            }
+
+            .card-ghost-drop {
+                transition: transform 0.18s ease-in-out;
+                transform: rotateZ(0deg);
+            }
+
+            .cards-drop-preview {
+                background-color: rgba(150, 150, 200, 0.1);
+                border: 1px dashed #abc;
+                margin: 5px;
+            }
+
+            .enter-new-card {
+                background-color: $board-column-color-bg;
+
+                border-radius: $border-radius;
+                // margin-left: $gap;
+
+                .add-card-control {
+                    display: flex;
+                    align-items: center;
+
+                    margin-bottom: 2px;
+
+                    .add-card-btn {
+                        padding: 7px 14px;
+                        font-size: 14px;
+
+                        color: $navbar-text-color;
+                        background-color: $add-column-btn;
+                        border: 1px solid $add-column-btn;
+                        border-radius: $border-radius;
+
+                        cursor: pointer;
+                        transition: all 0.4s ease;
+
+                        &:hover {
+                            opacity: 0.9;
+                            transition: all 0.4s ease;
+                        }
+                    }
+
+                    span {
+                        margin-left: 10px;
+                        font-size: 23px;
+                        cursor: pointer;
+                        color: #5e6c84;
+
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            color: #333;
+
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+
+                .textarea-new-card {
+                    // margin-top: $gap;
+                    width: 100%;
+                    min-height: 86px;
+                    max-height: 150px;
+                    padding: 6px 10px;
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                    margin-left: 1px;
+
+                    border-radius: 3px;
+                    border: 1px solid $add-column-btn;
+
+                    &:focus {
+                        outline: 1px solid $add-column-btn;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+        footer {
+            .footer-container {
+                padding: 5px $gap $gap $gap;
+                margin-top: 5px;
+                color: #5e6c84;
+                border-radius: $border-radius;
+                transition: all 0.3s ease;
+                font-weight: 500;
+
+                i {
+                    margin-right: 5px;
+                    color: #6b778c;
+
+                    transition: all 0.3s ease;
+                }
+
+                &:hover i {
+                    color: #333;
+
+                    transition: all 0.3s ease;
+                }
+
+                &:hover {
+                    background-color: rgba(150, 150, 200, 0.1);
+                    color: #333;
+                    // font-weight: 500;
+
+                    transition: all 0.2s ease;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

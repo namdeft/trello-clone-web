@@ -1,0 +1,130 @@
+@use 'scss' as *;
+
+.board-content {
+    display: flex;
+
+    border-radius: $border-radius;
+
+    padding: $gap $gap $gap 0;
+    margin: 0 $gap $gap 0;
+    height: 88vh;
+
+    overflow-x: auto;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-right: 0px solid $board-column-color-bg;
+        border-radius: 4px;
+    }
+    .columns-drop-preview {
+        background-color: rgba(150, 150, 200, 0.1);
+        border: 1px dashed #abc;
+        margin: 5px 45px 5px 5px;
+    }
+
+    i {
+        margin-right: $gap;
+    }
+
+    .add-new-column-container {
+        .add-new-column {
+            color: $navbar-text-color;
+            width: $board-column-width;
+            min-width: $board-column-width;
+            background-color: #ffffff3d;
+
+            margin-left: 10px;
+            height: fit-content;
+            padding: 10px 10px 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: hsla(0, 0, 100%, 0.33);
+                transition: all 0.3s ease;
+            }
+        }
+
+        .enter-new-column {
+            background-color: $board-column-color-bg;
+
+            border-radius: $border-radius;
+            margin-left: $gap;
+
+            form {
+                padding: 5px;
+                width: $board-column-width;
+                min-width: $board-column-width;
+
+                .input-new-column {
+                    width: 100%;
+                    padding: 6px 10px;
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                    margin-left: 1px;
+
+                    border-radius: 3px;
+                    border: 1px solid $add-column-btn;
+
+                    &:focus {
+                        outline: 1px solid $add-column-btn;
+                        border-radius: 3px;
+                    }
+                }
+
+                .add-column-control {
+                    display: flex;
+                    align-items: center;
+
+                    .add-column-btn {
+                        padding: 7px 14px;
+                        font-size: 14px;
+
+                        color: $navbar-text-color;
+                        background-color: $add-column-btn;
+                        border: 1px solid $add-column-btn;
+                        border-radius: $border-radius;
+
+                        cursor: pointer;
+                        transition: all 0.4s ease;
+
+                        &:hover {
+                            opacity: 0.9;
+                            transition: all 0.4s ease;
+                        }
+                    }
+
+                    span {
+                        margin-left: 10px;
+                        font-size: 23px;
+                        cursor: pointer;
+                        color: #5e6c84;
+
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            color: #333;
+
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.not-found {
+    padding: $gap;
+    color: $navbar-text-color;
+}
