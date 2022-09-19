@@ -7,13 +7,13 @@ import friendLogo from 'assets/img/dieuling.jpeg'
 import friendLogo1 from 'assets/img/dieuling2.jpeg'
 import friendLogo2 from 'assets/img/cutie.jpeg'
 
+import { BOARD_ID } from 'utilities/constants'
+
 const BoardBar = ({ board }) => {
     const [inputBoardTitle, setInputBoardTitle] = useState('')
 
     useEffect(() => {
-        const boardId = '631369e11c31e5be66b7b458'
-
-        fetchBoards(boardId).then((board) => setInputBoardTitle(board.title))
+        fetchBoards(BOARD_ID).then((board) => setInputBoardTitle(board.title))
     }, [])
 
     const handleChangeBoardTitle = (e) => {
