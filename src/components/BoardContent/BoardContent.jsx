@@ -43,7 +43,16 @@ const BoardContent = () => {
     }, [openAddInput])
 
     if (isEmpty(board)) {
-        return <div className='not-found'>Board Not Found</div>
+        return (
+            <div className='loading-container'>
+                <div className='loading-ring'>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        )
     }
 
     const onColumnDrop = (dropResult) => {
