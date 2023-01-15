@@ -1,4 +1,4 @@
-export const API_ROOT = 'https://trelloapp-clone-api.herokuapp.com'
+export const API_ROOT = 'https://trello-namdeft-api.vercel.app/'
 
 export const MODAL_ACTION_CLOSE = 'MODAL_ACTION_CLOSE'
 export const MODAL_ACTION_CONFIRM = 'MODAL_ACTION_CONFIRM'

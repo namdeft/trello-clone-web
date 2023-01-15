@@ -4,7 +4,7 @@ import './Column.scss'
 import Card from 'components/Card/Card'
 import ConfirmModal from 'components/Common/ConfirmModal'
 
-import { createNewCard, updateCard, updateColumn } from 'actions/callApi/callApi'
+import { createNewCard, updateColumn } from 'actions/callApi/callApi'
 import { mapOrder } from 'utilities/sort'
 import { MODAL_ACTION_CONFIRM } from 'utilities/constants'
 
@@ -62,7 +62,6 @@ const Column = ({ column, onCardDrop, onUpdateColumnState }) => {
                 throw new Error(error)
             })
         }
-        console.log(newColumn)
     }
 
     const handleUpdateCardOrder = (id) => {
