@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.scss'
 
-import { updateCard } from 'actions/callApi/callApi'
+import { updateCard } from '../../actions/callApi/callApi'
 
 const Card = ({ card, handleUpdateCardOrder }) => {
     const handleDeleteCard = () => {

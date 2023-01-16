@@ -1,8 +1,8 @@
 import React from 'react'
 import './AppBar.scss'
 
-import userImg from 'assets/img/deft2.webp'
-import logoImg from 'assets/img/alpacalogo.jpeg'
+import userImg from '../../assets/img/deft2.webp'
+import logoImg from '../../assets/img/alpacalogo.jpeg'
 
 const AppBar = () => {
     return (

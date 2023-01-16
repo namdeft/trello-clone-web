@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Column.scss'
 
-import Card from 'components/Card/Card'
-import ConfirmModal from 'components/Common/ConfirmModal'
+import Card from '../Card/Card'
+import ConfirmModal from '../Common/ConfirmModal'
 
-import { createNewCard, updateColumn } from 'actions/callApi/callApi'
-import { mapOrder } from 'utilities/sort'
-import { MODAL_ACTION_CONFIRM } from 'utilities/constants'
+import { createNewCard, updateColumn } from '../../actions/callApi/callApi'
+import { mapOrder } from '../../utilities/sort'
+import { MODAL_ACTION_CONFIRM } from '../../utilities/constants'
 
 import { Container, Draggable } from 'react-smooth-dnd'
 import { Dropdown } from 'react-bootstrap'

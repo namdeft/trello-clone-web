@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './BoardBar.scss'
 
-import { fetchBoards, updateBoard } from 'actions/callApi/callApi'
+import { fetchBoards, updateBoard } from '../../actions/callApi/callApi'
 
-import friendLogo from 'assets/img/deft1.jpeg'
-import friendLogo1 from 'assets/img/dieuling2.jpeg'
-import friendLogo2 from 'assets/img/cutie.jpeg'
+import friendLogo from '../../assets/img/deft1.jpeg'
+import friendLogo1 from '../../assets/img/dieuling2.jpeg'
+import friendLogo2 from '../../assets/img/cutie.jpeg'
 
-import { BOARD_ID } from 'utilities/constants'
+import { BOARD_ID } from '../../utilities/constants'
 
 const BoardBar = ({ board }) => {
     const [inputBoardTitle, setInputBoardTitle] = useState('')

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './BoardContent.scss'
-import BoardBar from 'components/BoardBar/BoardBar'
+import BoardBar from '../BoardBar/BoardBar'
+import Column from '../Column/Column'
 
 import {
     fetchBoards,
@@ -8,16 +9,14 @@ import {
     updateBoard,
     updateColumn,
     updateCard,
-} from 'actions/callApi/callApi'
-import { mapOrder } from 'utilities/sort'
-import { applyDrag } from 'utilities/dragDrop'
-import ConfirmModal from 'components/Common/ConfirmModal'
-import { BOARD_ID } from 'utilities/constants'
+} from '../../actions/callApi/callApi.js'
+import { mapOrder } from '../../utilities/sort'
+import { applyDrag } from '../../utilities/dragDrop'
+import ConfirmModal from '../Common/ConfirmModal'
+import { BOARD_ID } from '../../utilities/constants'
 
 import { isEmpty, cloneDeep } from 'lodash'
 import { Container, Draggable } from 'react-smooth-dnd'
-
-import Column from 'components/Column/Column'
 
 const BoardContent = () => {
     const [board, setBoard] = useState({})
