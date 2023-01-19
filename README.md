@@ -31,11 +31,3 @@
 ![image](https://user-images.githubusercontent.com/94590046/213526134-361c6b01-53b4-46f1-b281-3a7f1799e157.png)
 |:--:| 
 | *Drag and drop* |
-
-![image](https://user-images.githubusercontent.com/94590046/213526898-8352b50d-5ca3-43b7-b432-90f156f365c7.png)
-|:--:| 
-| *Add column* |
-
-![image](https://user-images.githubusercontent.com/94590046/213526858-eff8e27b-0516-4d8f-b7fe-237fb0cfa328.png)
-|:--:| 
-| *Add card* |
