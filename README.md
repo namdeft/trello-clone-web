@@ -1,4 +1,4 @@
-# Trello-clone
+# Trello-clone client
 <img src="https://img.shields.io/github/issues/anhduy1202/Not-Reddit"/> ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/anhduy1202/Not-Reddit) <img src="https://img.shields.io/github/license/anhduy1202/Not-Reddit"/>
 
 ## About
@@ -8,8 +8,8 @@
 * Available on PC Display
 
 ## 🤖 Features
-* See any movies, trailers
-* Searching movie
+* Create, update, delete board, column and card
+* Switch, drag and drop column, card
 
 ## 🤖 Tech stacks
 ### Front-end
@@ -17,3 +17,17 @@
 
 ### Hosting
 <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" >
+
+## 👾 Screenshots
+
+![image](https://user-images.githubusercontent.com/94590046/213525781-76ecf8a4-3c43-4c2e-9194-5ec45b947d9d.png)
+|:--:| 
+| *Home page* |
+
+![image](https://user-images.githubusercontent.com/94590046/213526015-74808b6c-320e-45fc-9c45-3d5ad4bb6a66.png)
+|:--:| 
+| *Drag and drop* |
+
+![image](https://user-images.githubusercontent.com/94590046/213526134-361c6b01-53b4-46f1-b281-3a7f1799e157.png)
+|:--:| 
+| *Drag and drop* |
